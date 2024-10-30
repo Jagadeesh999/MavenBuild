@@ -6,9 +6,9 @@ node(){
 		checkout changelog: false, poll: false, scm: scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'GitHubCreds', url: 'https://github.com/Jagadeesh999/MavenBuild']])
 	}
 	stage('Build Automation'){
-		"ls -lart \n
-		mvn clean install"
-		//	ls -lart target """
+		"ls -lart"
+		"mvn clean install"
+		"ls -lart target"
 	}
 	
 	stage('Code Scan'){
